@@ -14,7 +14,7 @@
 			body { 
 				font-family: Helvetica, sans-serif;
 				background-color: #eeeeee;
-				overflow:hidden; font-size:20px;
+				font-size:20px;
 			}
 
 			.tc-field {
@@ -103,7 +103,13 @@
 
 			/* EXAMPLE SPECIFIC STYLES FOLLOW */
 
+			#text-adventure .tc-field{ float:none; position:relative; width:200px; margin:auto; }
+			#text-adventure .next-btn,
+			#text-adventure .prev-btn { display:block;width:45%; }
+			#text-adventure .next-btn { float:right;}
+			#text-adventure .prev-btn { float:left;}
 
+			/*
 			#text-adventure { width:100%; height:100%; }
 			#text-adventure { width:100%; height:100%; }
 			#text-adventure .step { width:100%; height:100%;
@@ -130,10 +136,8 @@
 				text-shadow: -2px 0 white, 0 2px white, 2px 0 white, 0 -2px white; }
 			#text-adventure .step .inner .button-wrapper {  }
 
-			#text-adventure .next-btn,
-			#text-adventure .prev-btn { display:block;width:45%; }
-			#text-adventure .next-btn { float:right;}
-			#text-adventure .prev-btn { float:left;}
+			
+			*/
 
 		</style>
 		
@@ -141,11 +145,11 @@
 	
 	<body>
 		
-		<div class='merlin' id='text-adventure' style='width:100%;height:100%'>
+		<div class='merlin' id='text-adventure'>
 
-			<div class='step foyer' style='width:100%;height:100%'>
+			<div class='step foyer'>
 				
-				<img src='http://entrance_hall.jpg.to/' style='width:100%;height:100%'>
+				<img src='http://entrance_hall.jpg.to/'>
 
 				<div class='inner'>
 					<h3>Welcome to Merlin's Text Adventure.</h3>
@@ -165,7 +169,7 @@
 			
 			<div class='step kitchen'>
 
-				<img src='http://kitchen.jpg.to/' style='width:100%;height:100%'>
+				<img src='http://kitchen.jpg.to/'>
 
 				<div class='inner'>
 					<h3>Hi there, <span class='my_name'></span>.</h3>
@@ -285,6 +289,9 @@
 							},
 
 							visible:function(me){
+
+								//i commented this out because it was causing validation to be triggered,
+								//and state-invalid class to be added to the .tc-field and .step
 								//me.internal.current_step.fields.name.component.set_val('');
 							},
 
