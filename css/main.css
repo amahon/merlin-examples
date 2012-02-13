@@ -1,0 +1,87 @@
+body { 
+	font-family: Helvetica, sans-serif;
+	background-color: #eeeeee;
+	font-size:20px;
+}
+
+.tc-field {
+	position: relative;
+	float: left;
+	clear: left;
+	margin: 0 0 30px;
+	border: 1px solid transparent;
+}
+
+.tc-field.state-invalid {
+	
+}
+
+.tc-field-label {
+	font-size: 12px;
+	text-transform: uppercase;
+}
+
+.tc-field-hint {
+	color: #999999;
+	font-size: 14px;
+	font-style: italic;
+}
+
+/* simple tooltips --------------------------------------------------------------------------------- */
+.tooltip, .tc-field-simple-toolip { 
+	display: none; z-index: 200; position: absolute; font-size: 11px; line-height: 13px; text-align: left;
+	color: white; font-weight: 500; word-wrap: break-word; min-height: 18px; }
+	
+.tooltip.left, .tc-field-simple-toolip.left { 
+	padding: 8px 8px 10px 16px; background: url(http://www.slated.com/static/img/bg-tooltipdark-left.png) top left no-repeat; 
+	top: 0; right: -116px; width: 86px; }
+.tooltip.right, .tc-field-simple-toolip.right { 
+	padding: 8px 16px 10px 8px; background: url(http://www.slated.com/static/img/bg-tooltipdark-right.png) top right no-repeat; 
+	top: 0; left: -116px; width: 86px; }
+.tooltip.top, .tc-field-simple-toolip.top { 
+	padding: 14px 8px 9px; background: url(http://www.slated.com/static/img/bg-tooltipdark-top.png) top center no-repeat; 
+	min-width: 72px; max-width: 96px; right: -36px; top: 40px; min-height: 0; }
+.tooltip.bottom, .tc-field-simple-toolip.bottom { 
+	padding: 7px 8px 16px; background: url(http://www.slated.com/static/img/bg-tooltipdark-bottom.png) bottom center no-repeat; 
+	max-width: 200px; right: -36px; min-height: 0;  }
+.tooltip.bottom { top: 40px; }
+.tc-field-simple-toolip.bottom { bottom: 42px; top: auto !important; }
+	
+.tooltip.right.radio, .tc-field-simple-toolip.right.radio {
+	top: -6px;}
+.tooltip.top.radio, .tc-field-simple-toolip.top.radio {
+	right:auto; top: 24px; left: -36px; max-width: 72px;}
+.tooltip.bottom.radio, .tc-field-simple-toolip.bottom.radio {
+	right:auto; top: -40px; left: -48px; width: 96px;}
+.tc-field-simple-toolip.bottom.radio { top: auto; bottom: 24px; }
+
+.tooltip.hide-til-error, .tc-field-simple-toolip.hide-til-error { display: none !important; }
+.tooltip.hide-til-error.invalid, .tc-field-simple-toolip.hide-til-error.invalid { display: block !important; }
+
+.tooltip.activity { 
+	padding: 7px 8px 16px; background: url(http://www.slated.com/static/img/bg-tooltipdark-bottom.png) bottom center no-repeat; 
+	max-width: 300px; min-height: 0px; word-break: normal; overflow: hidden;}
+.tooltip .charlimit, .tc-field-simple-toolip .charlimit { 
+	display: block; margin-top: 4px; font-size: 10px; line-height: 1; color: #DDDDDF; font-weight: normal; }
+/*.tooltip .charlimit.top, 
+.tc-field-simple-toolip .charlimit.top { margin-top: 4px; }
+.tooltip.left .charlimit.top, 
+.tc-field-simple-toolip.left .charlimit.top,
+.tooltip.right .charlimit.top, 
+.tc-field-simple-toolip.right .charlimit.top { margin-top: 4px; }*/
+.charlimit.too-many { color: #EA6453; }
+
+.tooltip.invalid, 
+.tc-field-simple-toolip.invalid,
+.tooltip.invalid .tc-field-validator-error, 
+.tc-field-simple-toolip.invalid .tc-field-validator-error { color: #fff; }
+.tooltip.invalid.left, .tc-field-simple-toolip.left.invalid { background-image: url(http://www.slated.com/static/img/bg-tooltiperror-left.png) }
+.tooltip.invalid.right, .tc-field-simple-toolip.invalid.right { background-image: url(http://www.slated.com/static/img/bg-tooltiperror-right.png) }
+.tooltip.invalid.bottom, .tc-field-simple-toolip.invalid.bottom { background-image: url(http://www.slated.com/static/img/bg-tooltiperror-bottom.png) }
+.tooltip.invalid.top, .tc-field-simple-toolip.invalid.top { background-image: url(http://www.slated.com/static/img/bg-tooltiperror-top.png) }
+.charlimit.too-many { color: #fff; }
+
+.inactive-action-button-holder { position: relative; }
+.inactive-action-button-holder .action-button .tooltip { 
+	display: none; top: auto; bottom: 22px; width: 116px; left: -34px;}
+.inactive-action-button-holder .action-button:hover .tooltip { display: block; }
