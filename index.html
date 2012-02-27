@@ -566,7 +566,7 @@
 						'webdeveloper-finish':{
 							selector:'.step.webdeveloper-finish',
 							prev:'webdeveloper-two',
-							visible:function(me){  },
+							visible:function(me){ me.internal.current_step.$e.find('.character-name').text(me.get_val('name')); },
 							finish:function(me){	
 								me.set_val('name', me.internal.current_step.fields.name.component.get_val());
 								clearPrompt();
