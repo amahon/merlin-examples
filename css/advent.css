@@ -13,9 +13,7 @@ body {
 	padding: 30px;
 }
 
-#text-adventure { font-family: monospace; text-align: left; }
-
-#text-adventure .step { visibility: hidden; }
+#text-adventure { font-family: monospace; text-align: left; visibility: hidden; }
 
 #text-adventure .tc-field{ float:none; position:relative; margin: 0; /* width:200px; */ }
 #text-adventure .next-btn,
@@ -26,10 +24,13 @@ header a { text-decoration: none; color: #00D400; }
 
 .loading,
 #text-adventure p,
+#text-adventure div,
 #text-adventure ul { margin-top: 2em; max-width: 550px; }
 	
 #text-adventure a { color: #00D400; text-decoration: underline; }
 #text-adventure a:hover { color: #00A200; }
+
+#text-adventure .image { font-size: 10px; line-height: 10px; }
 
 #text-adventure .prompt { position: fixed; bottom: 30px; left: 30px; width: 100%; }
 #text-adventure .prompt input { 
@@ -39,3 +40,5 @@ header a { text-decoration: none; color: #00D400; }
 	border: none; background: none; color: #00D400;
 	text-shadow: 0px 0px 2px #00D400;
 }
+
+.error { font-weight: bold; }
